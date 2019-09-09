@@ -10,9 +10,7 @@
 }
 
 body {
-width: 1650px;
-margin-right: 260px;
-margin-left: 260px;
+margin: auto;
    }
 a{
     text-decoration: none;
@@ -26,10 +24,10 @@ img{
 
 .logo {
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    /*font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;*/
     margin-top: 36px;
-    width: 70px;
+    width: 80px;
     text-decoration: none;
     float: left;
 }
@@ -38,29 +36,31 @@ img{
 color: #1abc9c;
 }
 
-header{
-    display: inline-block;
+.menu{
+    display: block;
+    width: 1140px;
+    margin: auto;
+    height: 162px;
 }
-.site-navigation{
+.menu::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.menu-item {
     list-style: none;
 
    
 }
 
-header{
-    width: 1140px;
-    height: 165px;
-}
-
-.site-navigation{
-    width: 475px;
+.menu-item {
+    /*max-width: 463px;*/
     float: right;
     margin-top: 53px;
     text-transform: uppercase;
-    
 
 }   
-.site-navigation li {
+.menu-item li {
     float: left;
     font-size: 12px;
 }
@@ -82,11 +82,11 @@ header{
 } */
 
 
- .site-navigation li:not(:last-child){
+ .menu-item li:not(:last-child){
     margin-right: 35px;
   }
 
-  .zagolovok{
+  .title{
 
       text-transform: uppercase;
       color: #515151;
@@ -94,12 +94,13 @@ header{
       font-size: 40px;  
   }
 
-  .polosa{
+  .stripe{
     width: 1140px;
     height: 168px;
+    margin: auto;
     
   }
-  .poloska{
+  .green-stripe{
     margin: 0 auto;
     margin-top: 32px;
     width: 164px;
@@ -108,12 +109,14 @@ header{
       
   }
 
-  .polosa-2{
+  .stripe-2{
     width: 1140px;
     height: 156px;
+    margin: auto;
+
     
   }
-  .poloska-2{
+  .green-stripe-2{
     margin: 0 auto;
     margin-top: 32px;
     width: 164px;
@@ -122,7 +125,7 @@ header{
       
   }
 
-  .poloska-3{
+  .green-stripe-3{
     
     margin-top: 17px;
     margin-bottom: 17px;
@@ -137,15 +140,19 @@ header{
       margin: 0 auto;
       width: 1140px;
       height: 780px;
-      float: left;
   }
   .name{
       background-color: #0f0101;
       width: 200px;
       height: 40px;
       box-sizing: border-box;
-      padding: 12px 15px;
+      /*padding: 12px 15px;*/
   }
+  .name{
+      --h: 40px; 
+      height: var(--h); 
+      line-height: var(--h); } 
+  
 
 
   .list-style{
@@ -213,9 +220,10 @@ header{
 } */
 
 .bottom{
-    margin-top: 123px;
     height: 700px;
     width: 1140px;
+    margin: auto;
+
     
 }
 
